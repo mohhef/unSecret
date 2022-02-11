@@ -1,0 +1,34 @@
+{
+  "name": "unSecret",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js --exec babel-node",
+    "stop": "node stop hello_aws",
+    "build": "echo 'Building...'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohhef/unSecret.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohhef/unSecret/issues"
+  },
+  "homepage": "https://github.com/mohhef/unSecret#readme",
+  "dependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@graphql-tools/schema": "^8.3.1",
+    "apollo-server-express": "^2.25.3",
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "graphql": "^15.5.0",
+    "mongoose": "^6.1.10"
+  }
+}
