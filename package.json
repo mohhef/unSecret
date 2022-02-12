@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "db": "babel-node ./db/scripts/seed.js",
     "start": "nodemon ./index.js --exec babel-node",
     "stop": "node stop hello_aws",
     "build": "echo 'Building...'"
