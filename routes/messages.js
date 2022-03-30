@@ -1,15 +1,18 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../services/db");
+const cors = require('cors');
 
-router.use(express.urlencoded({ extended: false }));
+router.use(express.json());
+router.use(cors());
+// router.use(express.urlencoded({ extended: false }));
 
 router.post('/create', function(req, res){
-    const {message} = req.body;
-    
-    //check if the message is empty
-    if(message){
-        const insertionResult = db.insertMessage(message);
+    const {body, countdown_type} = req.body;
+    // console.log(req.body);
+    //check if the message and countdown_type are empties
+    if(body && countdown_type){
+        const insertionResult = db.insertMessage(body, countdown_type);
         
         insertionResult.then(() => {
             // success;
