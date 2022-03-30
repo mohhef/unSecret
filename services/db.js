@@ -4,8 +4,8 @@ const port = 5432;
 const pgp = require('pg-promise')(/* options */);
 const db = pgp('postgres://' + username + ':' + pws + '@localhost:' + port + '/unsecret');
 
-function insertMessage(msg){
-    const query = pgp.helpers.insert({body: msg}, null, 'messages');
+function insertMessage(msg, countdown){
+    const query = pgp.helpers.insert({body: msg, countdown_type: countdown}, null, 'messages');
     
     return db.none(query);
 }
